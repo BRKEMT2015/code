@@ -3,8 +3,7 @@ In this repository we are sharing all code that has been presented during the br
 
 **Content to be added closer to the event.**
 
-![alt text](images/port_utilisation.png "Port Utilisation use case")
-![alt text](images/swim.png "Software Image check use case")
+![alt text](images/title.png "LET'S START OUR PROGRAMMABILITY JOURNEY TOGETHER!")
 
 ## Getting Started
 All of the code presented in the Cisco Live session is available for you on this Github repository. If you do not have programming experience before hand, there are couple of steps you will need to cover before you can start trying the examples out.
@@ -42,6 +41,10 @@ Install the requirements to have all the necessary libraries for the code exampl
 pip install -r requirements.txt 
 ```
 
+## Use cases
+
+![alt text](images/port_utilisation.png "Port Utilisation use case")
+![alt text](images/swim.png "Software Image check use case")
 
 ## Authors & Maintainers
 

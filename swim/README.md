@@ -1,6 +1,6 @@
 # USE CASE 2: Are all the network switvhes in correct software version?
 
-![alt text](./images/swim.png "Software Image check use case")
+![alt text](/images/swim.png "Software Image check use case")
 
 Description TBF
 

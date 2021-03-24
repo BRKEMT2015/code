@@ -1,6 +1,6 @@
 # USE CASE 1: Is there a need for more switches?
 
-![alt text](./images/port_utilisation.png "Port Utilisation use case")
+![alt text](/images/port_utilisation.png "Port Utilisation use case")
 
 In this use case Antti needs to check the port utilisation of his network in order to verify whether he needs more switches or if there is already enough ports for future needs. For this we are using **Model Driven Programmability** with **Cisco IOS XE** switches. Our focus is on **Restconf** and **YANG models**.
 
