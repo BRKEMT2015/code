@@ -43,8 +43,8 @@ pip install -r requirements.txt
 
 ## Use cases
 
-![alt text](images/port_utilisation.png "Port Utilisation use case")
-![alt text](images/swim.png "Software Image check use case")
+[![alt text](images/port_utilisation.png "Port Utilisation use case")](/port_utilisation)
+[![alt text](images/swim.png "Software Image check use case")](/swim)
 
 ## Authors & Maintainers
 
