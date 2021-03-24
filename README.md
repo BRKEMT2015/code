@@ -41,7 +41,7 @@ Install the requirements to have all the necessary libraries for the code exampl
 pip install -r requirements.txt 
 ```
 
-## Use cases
+## Use cases & CODE
 
 We have covered two use cases in our Cisco Live session: Checking the port utilisation using **IOS XE** APIs with **Restconf** and **YANG**, and checking the software images using **Cisco DNA Center** REST APIs. Please click the preferred use case to see more information about the Postman usage and Python code.
 
