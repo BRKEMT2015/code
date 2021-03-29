@@ -34,7 +34,9 @@ module: Cisco-IOS-XE-interfaces-oper
 ```
 
 Based on this, we can start constructing the url for our RESTCONF API call. This is how we will do it:
-**https://address/root/data store/YANG module:Container/leaf[?<options>]**
+```
+https://<address>/<root>/<data store>/<YANG module:Container>/<leaf>[?<options>]
+```
 
 In this case, following the pyang output we have above:
 - address: the address of your switch including the restconf port (defaults to 443)
@@ -46,7 +48,9 @@ In this case, following the pyang output we have above:
 - options: when first trying this out, leave these out to see the full response that you get. You will notice that there is quite a lot of information, so focusing on the main areas (the name of the interface and the operative status) makes sense, therefor we would have here *fields=name;oper-status*
 
 Full URL would then be:
-**https://*address:port*/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface?fields=name;oper-status**
+```
+https://<address>:<port>/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface?fields=name;oper-status
+```
 
 Lets use this is Postman as the request url:
 ![alt text](images/postman_url.png "Postman URL")
