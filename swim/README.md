@@ -12,6 +12,18 @@ In this use case Antti needs to check the software version that each of his devi
 
 First thing that we should do when learning to use a new API is to test it to see how it works and what kind of response we get. [Postman](https://www.postman.com/) is a great tool for this! Lets see how we would navigate and find the correct REST APIs of DNA Center to work with.
 
+In order to be able to work with the Cisco DNA Center APIs, Antti needs to use an Authentication Token. This token is retrieved by using the Authentication API. Tha is where Antti will start. 
+
+1. Lets use this in Postman as the request url in order to retrieve the Authentication Token:
+![alt text](images/postman_dnac_auth_url.png "Postman Authentication URL")
+Notice that we are posting information, therefor the method should be **POST**.
+Please note that you should use your Cisco DNA Center URL or IP address in the place of {{baseurl}}. 
+
+2. In order to receive the Authentication Token, Antti will need to get proper authorization by the controller. 
+![alt text](images/postman_dnac_auth.png "Postman DNA Center credentials")
+We use *basic auth* for the authorization with the Cisco DNA Center username and password. Please note that you should put in the place of {{user}} your switch username and in the place of {{password}} your switch password.
+
+
 ## A script to verify the software version of the network devices
 
 TBD
