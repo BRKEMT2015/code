@@ -55,11 +55,12 @@ https://<address>:<port>/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/i
 1. Lets use this is Postman as the request url:
 ![alt text](images/postman_url.png "Postman URL")
 Notice that we are getting information, therefor the method should be **get**.
+Please note that you should use your switch address in the place of {{ip}} and your restconf port in the place of {{port}}. Restconf default port is 443.
 
 
 2. We also need to define the authorization, as only authorized persons should have access to our network information:
 ![alt text](images/postman_auth.png "Postman authorization")
-We use *basic auth* for the authorization with the switch username and password.
+We use *basic auth* for the authorization with the switch username and password. Please note that you should put in the place of {{user}} your switch username and in the place of {{pw}} your switch password.
 
 
 3. We need also headers for our call:
