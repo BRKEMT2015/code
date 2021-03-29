@@ -28,7 +28,7 @@ To be able to test the code, you will need to have something to test it against 
 
 ### Clone the repository and install required libraries
 
-When you have your developer environment up and running, make sure you install all libraries and modules required for your scripts. To keep your devveloper environment tidy, make sure to activate your *virtual environment* before installing the libraries.
+When you have your developer environment up and running, make sure you install all libraries and modules required for your scripts. To keep your developer environment tidy, make sure to activate your [*virtual environment*](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment) before installing the libraries.
 
 Clone this repository to the environment in which your are working:
 
