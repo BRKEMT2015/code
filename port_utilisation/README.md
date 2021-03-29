@@ -77,9 +77,49 @@ Note how the status is 200 OK, meaning that our request was successful. We have 
 
 ## A script to verify port utilisation of one switch
 
-TBD
+> Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
 
+Lets utilise Python to automate what we just did with Postman! An example code for testing the port utilisation of one switch can be found from the file [port_utilisation_one_switch.py](port_utilisation_one_switch.py).
+**Before running the code, please update the information on lines 33-35 with your switch details:**
+```Python
+switch = {
+    "IP": "0.0.0.0", #Your switch address here
+    "USER": "admin", #Your switch username here
+    "PW": "password" #Your switch password here
+}
+```
+
+**IF your switch uses other port for RESTCONF than the default 443, please update that information on line 84:**
+```Python
+    switch_utilisation = get_switch_if_utilisation(switch["IP"], switch["USER"], switch["PW"], rc_port=<YOUR PORT NUMBER>)
+```
+
+After doing these changes, you can run the script in your terminal:
+```
+python port_utilisation_one_switch.py
+```
+
+Once you have verified what the code prints out, go and check rest of the code, and try to understand how it works!
 
 ## A script to verify port utilisation of all the switches
 
-TBD
+> Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
+
+Checking the port utilisation from one switch is not really much of automation yet, but when we do this for many switches, we are off loading a lot of manual work. An example code for testing the port utilisation of many switches can be found from the file [port_utilisation_many_switches.py](port_utilisation_many_switches.py).
+
+This example utilises a CSV file to get the credentials of all the switches. So start by opening the [credentials.csv](credentials.csv) file and filling in all the switches that you want to include in the port utilisation check:
+
+```
+IP,USER,PW
+10.10.10.1,admin,password #replace with your switch details
+10.10.10.2,admin,password #replace with your switch details
+10.10.10.3,admin,password #replace with your switch details
+10.10.10.4,admin,password #replace with your switch details
+```
+
+You can add as many switches as you want. After adding your switches, you can run the script in your terminal:
+```
+python port_utilisation_many_switches.py
+``` 
+
+If you check the code, you will see that there is a lot similarity to the code where we checked port utilisation of one switch: now we just do the some action to as many switches as we have in the credentials.csv file.

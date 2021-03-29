@@ -66,7 +66,7 @@ def get_switch_if_utilisation(ip, username, password, rc_port=443):
     - A string of switch ip address
     - A string of switch username
     - A string of switch password
-    - Optionally integer for restconf port, if it is not the defaul one
+    - Optionally integer for restconf port, if it is not the default one
 
     Returns:
     - dictionary with number of up and down interfaces, to be accessed with keys "up" and "down"
