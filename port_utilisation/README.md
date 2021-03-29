@@ -52,23 +52,27 @@ Full URL would then be:
 https://<address>:<port>/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface?fields=name;oper-status
 ```
 
-Lets use this is Postman as the request url:
+1. Lets use this is Postman as the request url:
 ![alt text](images/postman_url.png "Postman URL")
 Notice that we are getting information, therefor the method should be **get**.
 
-We also need to define the authorization, as only authorized persons should have access to our network information:
+
+2. We also need to define the authorization, as only authorized persons should have access to our network information:
 ![alt text](images/postman_auth.png "Postman authorization")
 We use *basic auth* for the authorization with the switch username and password.
 
-We need also headers for our call:
+
+3. We need also headers for our call:
 ![alt text](images/postman_header.png "Postman headers")
 Here we define the content-type in which we are communicating with the switch.
 
-After the previous sections are filled, we can send our request, and will receive an response:
+
+4. After the previous sections are filled, we can send our request, and will receive an response:
 ![alt text](images/postman_response.png "Postman response")
 Note how the status is 200 OK, meaning that our request was successful. We have the information of the switch's interfaces in JSON format, which is easy to manage in Python.
 
-Now that we know how we can send a request using RESTCONF and YANG models, we can do the same in a script!
+
+**Now that we know how we can send a request using RESTCONF and YANG models, we can do the same in a script!**
 
 ## A script to verify port utilisation of one switch
 
