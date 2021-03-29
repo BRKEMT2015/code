@@ -14,7 +14,7 @@ All of the code presented in the Cisco Live session is available for you on this
 - Install Postman
 - Install a code editor, for example Atom or VS Code
 
-Not sure how to do these? DevNet has great learning material to get you through these steps. You will need **a free DevNet account** to access the material, so register if you haven't, and enjoy the learning labs to get your developer environment started:
+Not sure how to do these? DevNet has great learning material to get you through these steps. You will need **a free DevNet account** to access the material, so register [here](https://developer.cisco.com/) if you haven't, and enjoy the learning labs to get your developer environment started:
 - Windows: https://developer.cisco.com/learning/devnet-express/dnav4-track/dev-setup/dev-win/step/1
 - Mac: https://developer.cisco.com/learning/devnet-express/dnav4-track/dev-setup/dev-mac/step/1
 - Linux (CentOS): https://developer.cisco.com/learning/devnet-express/dnav4-track/dev-setup/dev-centos/step/1
