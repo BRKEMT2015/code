@@ -10,7 +10,10 @@ In this use case Antti needs to check the port utilisation of his network in ord
 
 ## Using POSTMAN with RESTCONF and an IOS XE switch
 
-TBD
+![alt text](images/postman_url.png "Postman URL")
+![alt text](images/postman_auth.png "Postman authorization")
+![alt text](images/postman_header.png "Postman headers")
+![alt text](images/postman_response.png "Postman response")
 
 ## A script to verify port utilisation of one switch
 
