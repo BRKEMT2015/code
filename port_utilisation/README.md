@@ -2,7 +2,7 @@
 
 ![alt text](/images/port_utilisation.png "Port Utilisation use case")
 
-In this use case Antti needs to check the port utilisation of his network in order to verify whether he needs more switches or if there is already enough ports for future needs. For this we are using **Model Driven Programmability** with **Cisco IOS XE** switches. Our focus is on **Restconf** and **YANG models**.
+In this use case Antti needs to check the port utilisation of his network in order to verify whether he needs more switches or if there is already enough ports for future needs. For this we are using **Model Driven Programmability** with **Cisco IOS XE** switches. Our focus is on **RESTCONF** and **YANG models**.
 
 ## Getting Started
 - Make sure you have installed the **requirements.txt** to have all the required libraries in your development environment
