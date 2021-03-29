@@ -1,6 +1,5 @@
 import requests
 import json
-from pprint import pprint
 import pandas as pd
 import urllib3
 urllib3.disable_warnings() ### NOT ADVISED TO USE DISABLE WARNINGS IN PRODUCTION ENVIRONMENT
