@@ -39,13 +39,13 @@ https://<address>/<root>/<data store>/<YANG module:Container>/<leaf>[?<options>]
 ```
 
 In this case, following the pyang output we have above:
-- address: the address of your switch including the restconf port (defaults to 443)
-- root: *restconf*
-- data store: *data*
-- YANG module: *Cisco-IOS-XE-interfaces-oper*
-- containerr: *interfaces*
-- leaf: *interfaces*
-- options: when first trying this out, leave these out to see the full response that you get. You will notice that there is quite a lot of information, so focusing on the main areas (the name of the interface and the operative status) makes sense, therefor we would have here *fields=name;oper-status*
+- **address**: the address of your switch including the restconf port (defaults to 443)
+- **root**: *restconf*
+- **data store**: *data*
+- **YANG module**: *Cisco-IOS-XE-interfaces-oper*
+- **container**: *interfaces*
+- **leaf**: *interfaces*
+- **options**: when first trying this out, leave these out to see the full response that you get. You will notice that there is quite a lot of information, so focusing on the main areas (the name of the interface and the operative status) makes sense, therefor we would have here *fields=name;oper-status*
 
 Full URL would then be:
 ```
