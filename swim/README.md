@@ -47,13 +47,21 @@ Note how the status is 200 OK, meaning that our request was successful. We have 
 Lets utilise Python to automate what we just did with Postman! An example code for finding and exporting SW data of one device can be found in the file [swim.py](swim.py).
 
 **Please not that this code is communicating to DevNet Sandbox. If you want to try it out against your own system you need to update the base url and credentials**
+**Make sure you have an empty Excel document named ***document.xlsx*** in the same directory as your code is located**
 
-You execute the code by executing
+You execute the code by:
 ```
 python swim.py
-´´´
-
+````
 
 ## A script utilising Cisco DNA Center SDK
 
-TBD
+> Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
+**Please not that this code is communicating to DevNet Sandbox. If you want to try it out against your own system you need to update the base url and credentials**
+**Make sure you have an empty Excel document named ***document.xlsx*** in the same directory as your code is located**
+
+You execute the code by:
+```
+python swim_SDK.py
+````
+
