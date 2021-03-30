@@ -2,28 +2,31 @@
 
 ![alt text](/images/swim.png "Software Image check use case")
 
-In this use case Antti needs to check the software version that each of his devices in his network are running, to ensure that they are running on a safe version. This time however, Antti will programming against a controller, Cisco DNA Center, and leverage the already collected and structured data of the devices that DNA Center has to offer. 
+In this use case Antti needs to check the software version that each of his devices in his network are running, to ensure that they are running on the correct version. This time however, Antti will programming against a controller, Cisco DNA Center, and leverage the already collected and structured data of the devices that DNA Center has to offer. His goal is to find the SW version of each device and export it to a separate Excel document. 
 
 ## Getting Started
 - Make sure you have installed the requirements.txt to have all the required libraries in your development environment
-- Select which Cisco DNA Center you want to work with. Good option is to work with the Cisco DNA Center sandbox in the [DevNet Sandbox](https://devnetsandbox.cisco.com/)
+- Select which Cisco DNA Center you want to work with. Good option is to work with the Cisco DNA Center sandbox in the [DevNet Sandbox](https://devnetsandbox.cisco.com/) with credentials **devnetuser/Cisco123!**
+```
+pip install -r requirements.txt
+```
 
 ## Using POSTMAN with Cisco DNA Center APIs
 
-First thing that we should do when learning to use a new API is to test it to see how it works and what kind of response we get. [Postman](https://www.postman.com/) is a great tool for this! Lets see how we would navigate and find the correct REST APIs of DNA Center to work with.
+First thing that we should do when learning to use a new API is to test it to see how it works and what kind of response we get. [Postman](https://www.postman.com/) is a great tool for this! Let's see how we would navigate and find the correct REST APIs of DNA Center to work with.
 
-In order to be able to work with the Cisco DNA Center APIs, Antti needs to use an Authentication Token. This token is retrieved by using the Authentication API. Tha is where Antti will start. 
+In order to be able to work with the Cisco DNA Center APIs, Antti needs to use an Authentication Token. This token is retrieved by using the Authentication API. This is where Antti will start. 
 
-1. Lets use this in Postman as the request url in order to retrieve the Authentication Token:
+1. Let's use this in Postman as the request url in order to retrieve the Authentication Token:
 ![alt text](images/postman_dnac_auth_url.png "Postman Authentication URL")
-Notice that we are posting information, therefor the method should be **POST**.
-Please note that you should use your Cisco DNA Center URL or IP address in the place of {{baseurl}}. 
+Notice that we are posting information, therefore the method should be **POST**.
+Please note that you should use your Cisco DNA Center URL or IP address instead of {{baseurl}}. 
 
 2. In order to receive the Authentication Token, Antti will need to get proper authorization by the controller:
 ![alt text](images/postman_dnac_auth.png "Postman DNA Center credentials")
-We use *basic auth* for the authorization with the Cisco DNA Center username and password. Please note that you should put in the place of {{user}} your switch username and in the place of {{password}} your switch password.
+We use *basic auth* for the authorization with the Cisco DNA Center username and password (credentials for the sandbox is devnetuser/Cisco123!). Please note that you should put in the place of {{user}} your username and instead of {{password}} your switch password.
 
-3. After the previous sections are filled, we can send our request, and will receive an response:
+3. After the previous sections are filled in, we can send our POST request, and will receive an response:
 ![alt text](images/postman_dnac_token.png "Postman DNA Center Token Retrieved")
 Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
 
