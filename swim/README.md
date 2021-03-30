@@ -57,6 +57,10 @@ python swim.py
 ## A script utilising Cisco DNA Center SDK
 
 > Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
+
+Lets utilise Cisco DNA Center SDK to automate even further and simplify the code.  An example code of this you find in the file [swim_SDK.py](swim_SDK.py).
+
+
 **Please not that this code is communicating to DevNet Sandbox. If you want to try it out against your own system you need to update the base url and credentials**
 **Make sure you have an empty Excel document named ***document.xlsx*** in the same directory as your code is located**
 
