@@ -47,7 +47,7 @@ Note how the status is 200 OK, meaning that our request was successful. We have 
 
 > Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
 
-Lets utilise Python to automate what we just did with Postman! An example code for finding and exporting SW data of one device can be found in the file [swim.py](swim.py).
+Let's utilise Python to automate what we just did with Postman! An example code for finding and exporting SW data of one device can be found in the file [swim.py](swim.py).
 
 **Please not that this code is communicating to DevNet Sandbox. If you want to try it out against your own system you need to update the base url and credentials**
 
@@ -62,7 +62,7 @@ python swim.py
 
 > Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
 
-Lets utilise Cisco DNA Center SDK to automate even further and simplify the code.  An example code of this you find in the file [swim_SDK.py](swim_SDK.py).
+Let's utilise Cisco DNA Center SDK to automate even further and simplify the code.  An example code of this you find in the file [swim_SDK.py](swim_SDK.py).
 
 
 **Please not that this code is communicating to DevNet Sandbox. If you want to try it out against your own system you need to update the base url and credentials**
