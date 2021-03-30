@@ -38,7 +38,7 @@ Note how we are using the token that we retrieved in step 1-3, in order to make 
 
 6. After the previous sections are filled, we can send our request, and will receive an response:
 ![alt text](images/postman_json.png "Postman Device List Data in JSON Format")
-Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
+Note how the status is 200 OK, meaning that our request was successful. We have gotten the device data in JSON format. 
 
 ## A script to verify the software version of the network devices
 
