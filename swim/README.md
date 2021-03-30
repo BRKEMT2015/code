@@ -19,7 +19,7 @@ In order to be able to work with the Cisco DNA Center APIs, Antti needs to use a
 Notice that we are posting information, therefor the method should be **POST**.
 Please note that you should use your Cisco DNA Center URL or IP address in the place of {{baseurl}}. 
 
-2. In order to receive the Authentication Token, Antti will need to get proper authorization by the controller. 
+2. In order to receive the Authentication Token, Antti will need to get proper authorization by the controller:
 ![alt text](images/postman_dnac_auth.png "Postman DNA Center credentials")
 We use *basic auth* for the authorization with the Cisco DNA Center username and password. Please note that you should put in the place of {{user}} your switch username and in the place of {{password}} your switch password.
 
@@ -27,16 +27,16 @@ We use *basic auth* for the authorization with the Cisco DNA Center username and
 ![alt text](images/postman_dnac_token.png "Postman DNA Center Token Retrieved")
 Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
 
-4. Now we need to retrieve device information by using the Device List API. 
+4. Now we need to retrieve device information by using the Device List API:
 ![alt text](images/postman_getdevicesurl.png "Postman Device List REST API")
 Just as in step 1, we add the url of the API but this time we will retrieve data, therefore the method should be **GET**.
 Please note that you should use your Cisco DNA Center URL or IP address in the place of {{baseurl}}. 
 
-5.
+5. We need also headers for our call:
 ![alt text](images/postman_headers.png "Postman Headers")
 Note how we are using the token that we retrieved in step 1-3, in order to make this REST API call to the Cisco DNA Center. 
 
-6.
+6. After the previous sections are filled, we can send our request, and will receive an response:
 ![alt text](images/postman_json.png "Postman Device List Data in JSON Format")
 Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
 
