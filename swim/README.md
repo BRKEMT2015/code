@@ -28,16 +28,16 @@ We use *basic auth* for the authorization with the Cisco DNA Center username and
 Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
 
 4. Now we need to retrieve device information by using the Device List API. 
-![alt text](images/postman_dnac_getdevicesurl.png "Postman Device List REST API")
+![alt text](images/postman_getdevicesurl.png "Postman Device List REST API")
 Just as in step 1, we add the url of the API but this time we will retrieve data, therefore the method should be **GET**.
 Please note that you should use your Cisco DNA Center URL or IP address in the place of {{baseurl}}. 
 
 5.
-![alt text](images/postman_dnac_headers.png "Postman Headers")
+![alt text](images/postman_headers.png "Postman Headers")
 Note how we are using the token that we retrieved in step 1-3, in order to make this REST API call to the Cisco DNA Center. 
 
 6.
-![alt text](images/postman_dnac_json.png "Postman Device List Data in JSON Format")
+![alt text](images/postman_json.png "Postman Device List Data in JSON Format")
 Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
 
 ## A script to verify the software version of the network devices
