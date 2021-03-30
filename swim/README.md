@@ -23,6 +23,14 @@ Please note that you should use your Cisco DNA Center URL or IP address in the p
 ![alt text](images/postman_dnac_auth.png "Postman DNA Center credentials")
 We use *basic auth* for the authorization with the Cisco DNA Center username and password. Please note that you should put in the place of {{user}} your switch username and in the place of {{password}} your switch password.
 
+3. After the previous sections are filled, we can send our request, and will receive an response:
+![alt text](images/postman_dnac_token.png "Postman DNA Center Token Retrieved")
+Note how the status is 200 OK, meaning that our request was successful. We have gotten the token in JSON format. 
+
+4. Now we need to retrieve device information by using the Device List API. 
+![alt text](images/postman_dnac_devicelist.png "Postman Device List REST API")
+
+
 
 ## A script to verify the software version of the network devices
 
