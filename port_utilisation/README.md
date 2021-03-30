@@ -10,7 +10,7 @@ In this use case Antti needs to check the port utilisation of his network in ord
 
 ## Using POSTMAN with RESTCONF and an IOS XE switch
 
-First thing that we should do when learning to use a new API ist to test it to see how it works and what kind of response we get. [Postman](https://www.postman.com/) is a great tool for this! Lets see how we would navigate and find the correct RESTCONF settings for getting the information about the switch ports.
+The first thing that we should do when learning to use a new API is to test it to see how it works and what kind of response we get. [Postman](https://www.postman.com/) is a great tool for this! Lets see how we would navigate and find the correct RESTCONF settings for getting the information about the switch ports.
 
 We recognised that there is a YANG model [Cisco-IOS-XE-interfaces-oper](https://github.com/YangModels/yang/blob/master/vendor/cisco/xe/1741/Cisco-IOS-XE-interfaces-oper.yang) that provides us with the correct information. By using the tool [pyang](https://github.com/mbj4668/pyang) we can nicely visualize the YANG model's content.
 
@@ -44,23 +44,23 @@ In this case, following the pyang output we have above:
 - **data store**: *data*
 - **YANG module**: *Cisco-IOS-XE-interfaces-oper*
 - **container**: *interfaces*
-- **leaf**: *interfaces*
-- **options**: when first trying this out, leave these out to see the full response that you get. You will notice that there is quite a lot of information, so focusing on the main areas (the name of the interface and the operative status) makes sense, therefor we would have here *fields=name;oper-status*
+- **leaf**: *interface*
+- **options**: when first trying this out, leave the options out to see the full response that you get. You will notice that there is quite a lot of information, so focusing on the relevant information (the name of the interface and the operative status) makes sense, therefor we could have here *fields=name;oper-status*
 
 Full URL would then be:
 ```
 https://<address>:<port>/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface?fields=name;oper-status
 ```
 
-1. Lets use this is Postman as the request url:
+1. Lets use this in Postman as the request url:
 ![alt text](images/postman_url.png "Postman URL")
-Notice that we are getting information, therefor the method should be **get**.
+Notice that we are requesting for information, therefor the method should be **GET**.
 Please note that you should use your switch address in the place of {{ip}} and your restconf port in the place of {{port}}. Restconf default port is 443.
 
 
 2. We also need to define the authorization, as only authorized persons should have access to our network information:
 ![alt text](images/postman_auth.png "Postman authorization")
-We use *basic auth* for the authorization with the switch username and password. Please note that you should put in the place of {{user}} your switch username and in the place of {{pw}} your switch password.
+We use *basic auth* for the authorization with the switch username and password. Please note that you should use in the place of {{user}} your switch username and in the place of {{pw}} your switch password.
 
 
 3. We need also headers for our call:
@@ -68,7 +68,7 @@ We use *basic auth* for the authorization with the switch username and password.
 Here we define the content-type in which we are communicating with the switch.
 
 
-4. After the previous sections are filled, we can send our request, and will receive an response:
+4. After the previous sections are filled, we can send our request, and will receive a response:
 ![alt text](images/postman_response.png "Postman response")
 Note how the status is 200 OK, meaning that our request was successful. We have the information of the switch's interfaces in JSON format, which is easy to manage in Python.
 
@@ -80,6 +80,7 @@ Note how the status is 200 OK, meaning that our request was successful. We have 
 > Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
 
 Lets utilise Python to automate what we just did with Postman! An example code for testing the port utilisation of one switch can be found from the file [port_utilisation_one_switch.py](port_utilisation_one_switch.py).
+
 **Before running the code, please update the information on lines 33-35 with your switch details:**
 ```Python
 switch = {
@@ -94,7 +95,7 @@ switch = {
     switch_utilisation = get_switch_if_utilisation(switch["IP"], switch["USER"], switch["PW"], rc_port=<YOUR PORT NUMBER>)
 ```
 
-After doing these changes, you can run the script in your terminal:
+After completing these changes, you can run the script in your terminal:
 ```
 python port_utilisation_one_switch.py
 ```
@@ -105,7 +106,7 @@ Once you have verified what the code prints out, go and check rest of the code, 
 
 > Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
 
-Checking the port utilisation from one switch is not really much of automation yet, but when we do this for many switches, we are off loading a lot of manual work. An example code for testing the port utilisation of many switches can be found from the file [port_utilisation_many_switches.py](port_utilisation_many_switches.py).
+Checking the port utilisation from one switch is not really much of automation yet, but when we do this for many switches, we are offloading a lot of manual work. An example code for testing the port utilisation of many switches can be found from the file [port_utilisation_many_switches.py](port_utilisation_many_switches.py).
 
 This example utilises a CSV file to get the credentials of all the switches. So start by opening the [credentials.csv](credentials.csv) file and filling in all the switches that you want to include in the port utilisation check:
 
@@ -122,4 +123,4 @@ You can add as many switches as you want. After adding your switches, you can ru
 python port_utilisation_many_switches.py
 ``` 
 
-If you check the code, you will see that there is a lot similarity to the code where we checked port utilisation of one switch: now we just do the some action to as many switches as we have in the credentials.csv file.
+If you check the code, you will see that there is a lot of similarity to the code where we checked the port utilisation of one switch: now we just do the same action to as many switches as we have in the credentials.csv file.
