@@ -42,7 +42,16 @@ Note how the status is 200 OK, meaning that our request was successful. We have 
 
 ## A script to verify the software version of the network devices
 
-TBD
+> Note! Check that you have installed the requirements.txt from the root of this repository, so that you have the required libraries installed for the code to work.
+
+Lets utilise Python to automate what we just did with Postman! An example code for finding and exporting SW data of one device can be found in the file [swim.py](swim.py).
+
+**Please not that this code is communicating to DevNet Sandbox. If you want to try it out against your own system you need to update the base url and credentials**
+
+You execute the code by executing
+```
+python swim.py
+´´´
 
 
 ## A script utilising Cisco DNA Center SDK
